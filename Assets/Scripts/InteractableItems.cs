@@ -30,6 +30,16 @@ public class InteractableItems : MonoBehaviour
         return null;
     }
 
+    public void DisplayInventory()
+    {
+        controller.LogStringWithReturn("You look in your backpack, inside you have: ");
+
+        for (int i = 0; i < nounsInInventory.Count; i++)
+        {
+            controller.LogStringWithReturn(nounsInInventory[i]);
+        }
+    }
+
     public void ClearCollections()
     {
         examineDictionary.Clear();
